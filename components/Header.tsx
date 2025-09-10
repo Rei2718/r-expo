@@ -23,21 +23,21 @@ export default function Header({ isOpen, toggleMenu }: HeaderProps) {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 p-4 flex items-center justify-between z-40 transition-colors duration-1000 ${
-        isScrolled && !isOpen ? "bg-background/90" : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 rounded-b-3xl p-4 px-6 flex items-center justify-between z-40 transition-colors duration-1000 ${
+        isScrolled && !isOpen ? "bg-background" : "bg-transparent"
       }`}
     >
       <Link href="/" className="h-6 w-6">
         <House
           className={`transition-colors duration-1000 ${
-            isOpen ? "text-background" : "text-foreground"
+            isOpen ? "text-primary" : "text-foreground"
           }`}
           strokeWidth={1.5}
         />
       </Link>
       <Hexagon
         className={`h-6 w-6 transition-colors duration-1000 ${
-          isOpen ? "text-background" : "text-foreground"
+          isOpen ? "text-primary" : "text-foreground"
         }`}
         strokeWidth={1.5}
         />
