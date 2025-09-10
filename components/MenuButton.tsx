@@ -5,7 +5,7 @@ type MenuButtonProps = {
 
 export default function MenuButton({ isOpen, onClick }: MenuButtonProps) {
 
-  const barColor = isOpen ? "bg-background" : "bg-foreground";
+  const barColor = isOpen ? "bg-primary" : "bg-foreground";
 
   return (
     <button

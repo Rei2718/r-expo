@@ -31,7 +31,7 @@ export default function Home() {
           </div>
           <div className="absolute bottom-0 left-0 h-[30svh] w-full bg-gradient-to-b from-transparent to-background -z-10"></div>
         </div>
-        <div className="w-[80svw] h-[100svh] mx-auto -mt-[15svh] bg-gray-500"></div>
+        <div className="w-[80svw] h-[100svh] mx-auto -mt-[15svh] bg-primary rounded-3xl"></div>
         <div className="h-[100svh] bg-pink-500"></div>
         <div className="h-[100svh]">footer</div>
       </main>
