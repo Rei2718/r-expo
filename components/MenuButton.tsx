@@ -1,79 +1,31 @@
-"use client";
-import { useState, useEffect } from "react";
-import { HiOutlineBars3BottomRight } from "react-icons/hi2";
-import { MdClose } from "react-icons/md";
+type MenuButtonProps = {
+  isOpen: boolean;
+  onClick: () => void;
+};
 
-export default function MenuButton() {
-  const [isOpen, setIsOpen] = useState(false);
-  useEffect(() => {
-    document.body.classList.toggle("overflow-hidden", isOpen);
-  }, [isOpen]);
+export default function MenuButton({ isOpen, onClick }: MenuButtonProps) {
 
-  const toggleMenu = () => {
-    setIsOpen((prev) => !prev);
-  };
+  const barColor = isOpen ? "bg-background" : "bg-foreground";
 
   return (
-    <>
-      <button
-        onClick={toggleMenu}
-        className="z-50"
-      >
-        {isOpen ? (
-          <MdClose className="h-8 w-8 text-gray-900 transition-transform duration-1000 transform" />
-        ) : (
-          <HiOutlineBars3BottomRight className="h-8 w-8 text-[#F4F3E1] transition-transform duration-1000 transform" />
-        )}
-      </button>
-
-      <div
-        className={`fixed inset-0 bg-[#F4F3E1] bg-opacity-80 flex flex-col items-center justify-center transition-all duration-1000 z-50 ${
-          isOpen
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
-        }`}
-      >
-        <nav>
-          <ul className="space-y-6 text-2xl text-gray-900">
-            <li>
-              <a
-                href="#home"
-                onClick={toggleMenu}
-                className="hover:text-gray-400 transition-colors"
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                href="#concept"
-                onClick={toggleMenu}
-                className="hover:text-gray-400 transition-colors"
-              >
-                Concept
-              </a>
-            </li>
-            <li>
-              <a
-                href="#products"
-                onClick={toggleMenu}
-                className="hover:text-gray-400 transition-colors"
-              >
-                Products
-              </a>
-            </li>
-            <li>
-              <a
-                href="#contact"
-                onClick={toggleMenu}
-                className="hover:text-gray-400 transition-colors"
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </>
+    <button
+      onClick={onClick}
+      className="relative z-[60] flex h-6 w-6 flex-col items-center justify-center space-y-1"
+    >
+      <span
+        className={`
+          block h-0.5 w-6 transform transition-all duration-1000 ease-in-out rounded-full
+          ${barColor}
+          ${isOpen ? "translate-y-[6px] rotate-45" : ""}
+        `}
+      ></span>
+      <span
+        className={`
+          block h-0.5 w-4.5 ml-auto transform transition-all duration-1000 ease-in-out rounded-full
+          ${barColor}
+          ${isOpen ? "-rotate-45 w-6" : ""}
+        `}
+      ></span>
+    </button>
   );
 }
