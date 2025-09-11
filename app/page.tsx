@@ -25,13 +25,20 @@ export default function Home() {
 
       <main className="relative -z-10 flex flex-col">
         <div className="relative h-[90svh]">
-          <Image src="/hero.webp" alt="Hero Image" fill className=" -z-20 object-cover" />
-          <div className="absolute inset-0 pt-16 pb-[15svh] flex justify-center items-center">
+          <Image
+            src="/hero.webp"
+            alt="Hero Image"
+            fill
+            unoptimized
+            priority
+            className="-z-20 object-cover"
+          />
+          <div className="absolute inset-0 pt-16 pb-[10svh] flex justify-center items-center">
             <p className="text-6xl text-foreground font-bold">REXPO</p>
           </div>
-          <div className="absolute bottom-0 left-0 h-[30svh] w-full bg-gradient-to-b from-transparent to-background -z-10"></div>
+          <div className="absolute bottom-0 left-0 h-[20svh] w-full bg-gradient-to-b from-transparent to-background -z-10"></div>
         </div>
-        <div className="w-[80svw] h-[100svh] mx-auto -mt-[15svh] bg-primary rounded-3xl"></div>
+        <div className="w-[80svw] h-[100svh] mx-auto -mt-[10svh] bg-primary rounded-3xl"></div>
         <div className="h-[100svh] bg-pink-500"></div>
         <div className="h-[100svh]">footer</div>
       </main>
