@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #E5E5EA;
-  --foreground: #2C2C2E;
+  --background: #F2F2F7;
+  --foreground: #1C1C1E;
   --primary: #FF9230;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #2C2C2E;
-    --foreground: #E5E5EA;
+    --background: #1C1C1E;
+    --foreground: #F2F2F7;
     --primary: #FF9230;
   }
 }
@@ -18,6 +18,10 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
+
+  --radius-sm: clamp(8px, calc(0.5vw + 4px), 12px);
+  --radius-md: clamp(12px, calc(0.5vw + 8px), 24px);
+  --radius-lg: clamp(16px, calc(0.5vw + 12px), 32px);
 }
 
 body {
@@ -31,6 +35,10 @@ body {
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+section {
+  margin: 0;
 }
 
 /* ScrollBar - Firefox */
