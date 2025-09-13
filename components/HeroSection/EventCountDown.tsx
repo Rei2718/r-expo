@@ -1,5 +1,3 @@
-"use client";
-
 import Countdown from 'react-countdown';
 
 const targetDate = new Date("2026-02-11T10:00:00");
