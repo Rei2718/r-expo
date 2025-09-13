@@ -1,46 +1,29 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Header from "@/components/Header";
-import MenuOverlay from "@/components/MenuOverlay";
-import Image from "next/image";
+import Card from "@/components/ui/Card";
+import HeaderLayout from "@/components/HeaderSection/HeaderLayout";
+import HeroSection from "@/components/HeroSection/HeroLayout";
 
 export default function Home() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(prev => !prev);
-  };
-
-  useEffect(() => {
-    document.body.classList.toggle("overflow-hidden", isOpen);
-  }, [isOpen]);
-
   return (
     <>
-      <div className="z-[100]">
-        <Header isOpen={isOpen} toggleMenu={toggleMenu} />
-        <MenuOverlay isOpen={isOpen} toggleMenu={toggleMenu} />
-      </div>
+      <HeaderLayout />
+      <main>
+        <HeroSection />
 
-      <main className="relative -z-10 flex flex-col">
-        <div className="relative h-[90svh]">
-          <Image
-            src="/hero.webp"
-            alt="Hero Image"
-            fill
-            unoptimized
-            priority
-            className="-z-20 object-cover"
-          />
-          <div className="absolute inset-0 pt-16 pb-[10svh] flex justify-center items-center">
-            <p className="text-6xl text-foreground font-bold">REXPO</p>
-          </div>
-          <div className="absolute bottom-0 left-0 h-[20svh] w-full bg-gradient-to-b from-transparent to-background -z-10"></div>
-        </div>
-        <div className="w-[80svw] h-[100svh] mx-auto -mt-[10svh] bg-primary rounded-3xl"></div>
-        <div className="h-[100svh] bg-pink-500"></div>
-        <div className="h-[100svh]">footer</div>
+        <section className="h-[100svh] w-full bg-background rounded-b-3xl">
+        </section>
+
+        <section className="h-[100svh] w-full">
+        </section>
+
+        <section className="h-[100svh] w-full bg-background rounded-3xl">
+          <Card />
+        </section>
+
+        <section className="h-[100svh] w-full">
+          <footer></footer>
+        </section>
       </main>
     </>
   );
