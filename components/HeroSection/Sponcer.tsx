@@ -10,8 +10,8 @@ export default function SponcerCard() {
     <div
       className="
         h-full rounded-xl
-        border border-foreground/30
-        backdrop-blur-md bg-foreground/20
+        border border-foreground/20
+        backdrop-blur-md bg-foreground/10
         grid p-4
       "
     >
