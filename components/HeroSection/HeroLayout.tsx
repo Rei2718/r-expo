@@ -1,6 +1,5 @@
 import BackGround from "@/components/HeroSection/BackGround";
 import MainTitle from "@/components/HeroSection/MainTitle";
-import SponcerCard from "@/components/HeroSection/Sponcer";
 import DateTitle from "@/components/HeroSection/DateTitle";
 
 export default function HeroSection() {
@@ -20,7 +19,6 @@ export default function HeroSection() {
       <div className="row-start-1 col-start-1 self-end w-full flex flex-col items-center gap-6 p-6">
         <DateTitle />
         <div className="w-full">
-          <SponcerCard />
         </div>
       </div>
     </section>
