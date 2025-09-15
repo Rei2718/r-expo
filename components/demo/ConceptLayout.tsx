@@ -4,8 +4,8 @@ export default function ConceptLayout() {
   return (
     <>
       <section data-section="concept-message" aria-label="Concept Message">
-        <div className="h-full w-lvw">
-          <div className="grid gap-6 p-6 py-24">
+        <div className="h-lvh w-lvw grid">
+          <div className="grid gap-6 p-6 my-auto">
             <div className="text-4xl text-left">
               ここから始まる、
               <br />
