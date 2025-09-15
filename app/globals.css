@@ -2,14 +2,16 @@
 
 :root {
   --background: #F2F2F7;
-  --foreground: #1C1C1E;
+  --foreground: #000000;
+  --secoundary: #121212;
   --primary: #FF9230;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #1C1C1E;
+    --background: #000000;
     --foreground: #F2F2F7;
+    --secoundary: #121212;
     --primary: #FF9230;
   }
 }
@@ -17,6 +19,7 @@
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-secoundary: var(--secoundary);
   --color-primary: var(--primary);
 
   --radius-sm: clamp(8px, calc(0.5vw + 4px), 12px);
