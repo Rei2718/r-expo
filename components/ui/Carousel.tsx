@@ -17,10 +17,7 @@ export default function Carousel() {
 
   return (
     <>
-      <div className=''>
-        <div className='text-3xl p-5'>TEXT</div>
-        <EmblaCarousel slides={SLIDES} options={OPTIONS} />
-      </div>
+      <EmblaCarousel slides={SLIDES} options={OPTIONS} />
     </>
 );
 }

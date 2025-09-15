@@ -29,29 +29,31 @@ export default function HeaderLayout() {
   }, []);
 
   return (
-    <div className="z-50">
-      <header
-        className={clsx(
-          "fixed top-0 left-0 right-0 z-[60] flex items-center justify-between px-6 py-4 transition-colors duration-1000",
-          {
-            "bg-background border-b border-foreground/20": isScrolled && !isOpen,
-            "bg-transparent border-b border-transparent": !isScrolled || isOpen,
-          }
-        )}
-      >
-        <Link href="/" className="h-6 w-6">
-          <Hexagon
-            className={clsx("h-6 w-6 transition-colors duration-1000 md:hidden", {
-              "text-primary": isOpen,
-              "text-foreground": !isOpen,
-            })}
-            strokeWidth={1.5}
-          />
-        </Link>
-        <MenuButton isOpen={isOpen} onClick={toggleMenu} />
-      </header>
+    <header data-section="header">
+      <div className="z-50">
+        <header
+          className={clsx(
+            "fixed top-0 left-0 right-0 z-[60] flex items-center justify-between px-6 py-4 transition-colors duration-1000",
+            {
+              "bg-background border-b border-foreground/20": isScrolled && !isOpen,
+              "bg-transparent border-b border-transparent": !isScrolled || isOpen,
+            }
+          )}
+        >
+          <Link href="/" className="h-6 w-6">
+            <Hexagon
+              className={clsx("h-6 w-6 transition-colors duration-1000 md:hidden", {
+                "text-primary": isOpen,
+                "text-foreground": !isOpen,
+              })}
+              strokeWidth={1.5}
+            />
+          </Link>
+          <MenuButton isOpen={isOpen} onClick={toggleMenu} />
+        </header>
 
-      <MenuOverlay isOpen={isOpen} toggleMenu={toggleMenu} />
-    </div>
+        <MenuOverlay isOpen={isOpen} toggleMenu={toggleMenu} />
+      </div>
+    </header>
   );
 }
