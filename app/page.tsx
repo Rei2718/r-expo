@@ -1,30 +1,35 @@
 "use client";
 
-import Card from "@/components/ui/Card";
+import BackgroundMovieLayer from "@/components/demo/BackgroundMovieLayer";
+import ConceptLayout from "@/components/demo/ConceptLayout";
+import HeroLayout from "@/components/demo/HeroLayout";
+import NewsFeed from "@/components/demo/NewsLayout";
 import HeaderLayout from "@/components/HeaderSection/HeaderLayout";
-import HeroSection from "@/components/HeroSection/HeroLayout";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
+      {/* ===== Background Movie Layer===== */}
+      <BackgroundMovieLayer />
+
+      {/* ===== Header ===== */}
       <HeaderLayout />
-      <main>
-        <HeroSection />
 
-        <section className="h-[100svh] w-full bg-background rounded-b-3xl">
-        </section>
+      {/* ===== Hero===== */}
+      <HeroLayout />
 
-        <section className="h-[100svh] w-full">
-        </section>
+      {/* ===== Concept ===== */}
+      <ConceptLayout/>
 
-        <section className="h-[100svh] w-full bg-background rounded-3xl">
-          <Card />
-        </section>
+      {/* ===== News Section ===== */}
+      <NewsFeed />
 
-        <section className="h-[100svh] w-full">
-          <footer></footer>
-        </section>
-      </main>
+      <section data-section="demo" aria-label="Feed">
+        <div className="h-[100lvh] w-[100lvw] border border-pink-500" />
+      </section>
+      <section data-section="demo" aria-label="Feed">
+        <div className="h-[100lvh] w-[100lvw] border border-orange-500" />
+      </section>
     </>
   );
 }
