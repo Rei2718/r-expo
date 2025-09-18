@@ -3,22 +3,25 @@
 :root {
   --background: #F2F2F7;
   --foreground: #000000;
+  --gray: #86868b;
   --secondary: #121212;
   --primary: #FF9230;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #000000;
-    --foreground: #F2F2F7;
-    --secondary: #121212;
-    --primary: #FF9230;
+  --background: #000000;
+  --foreground: #F2F2F7;
+  --gray: #86868b;
+  --secondary: #121212;
+  --primary: #FF9230;
   }
 }
 
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-gray: var(--gray);
   --color-secondary: var(--secondary);
   --color-primary: var(--primary);
 

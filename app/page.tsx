@@ -1,35 +1,23 @@
-"use client";
-
-import BackgroundMovieLayer from "@/components/demo/BackgroundMovieLayer";
-import ConceptLayout from "@/components/demo/ConceptLayout";
-import HeroLayout from "@/components/demo/HeroLayout";
-import NewsFeed from "@/components/demo/NewsLayout";
-import HeaderLayout from "@/components/HeaderSection/HeaderLayout";
+import Concept from "@/components/dev2/Concept";
+import Header from "@/components/dev2/Header";
+import Hero from "@/components/dev2/Hero";
 
 export default function HomePage() {
   return (
     <>
-      {/* ===== Background Movie Layer===== */}
-      <BackgroundMovieLayer />
+      {/* ========== Header ========== */}
+      <Header />
 
-      {/* ===== Header ===== */}
-      <HeaderLayout />
+      {/* ========== Header ========== */}
+      <Hero />
 
-      {/* ===== Hero===== */}
-      <HeroLayout />
 
-      {/* ===== Concept ===== */}
-      <ConceptLayout/>
+      <div className="bg-secondary h-lvh w-lvw rounded-t-lg"></div>
 
-      {/* ===== News Section ===== */}
-      <NewsFeed />
+      {/* ========== Concept ========== */}
+      <Concept />
 
-      <section data-section="demo" aria-label="Feed">
-        <div className="h-[100lvh] w-[100lvw] border border-pink-500" />
-      </section>
-      <section data-section="demo" aria-label="Feed">
-        <div className="h-[100lvh] w-[100lvw] border border-orange-500" />
-      </section>
+      <div className="bg-background h-lvh w-lvw"></div>
     </>
   );
 }
