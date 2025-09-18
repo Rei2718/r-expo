@@ -63,7 +63,7 @@ export default function NewsFeed() {
               />
             </div>
 
-            <div className="mt-3 flex items-center gap-3">
+            <div className="mt-3 flex items-center gap-2">
               <span className="py-1 text-xs font-medium text-foreground">
                 {item.label}
               </span>

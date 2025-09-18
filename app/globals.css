@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --background: #F2F2F7;
+  --background: #F5F5F7;
   --foreground: #000000;
-  --gray: #86868b;
-  --secondary: #121212;
+  --gray: #86868B;
+  --secondary: #1D1D1F;
   --primary: #FF9230;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
   --background: #000000;
-  --foreground: #F2F2F7;
-  --gray: #86868b;
-  --secondary: #121212;
+  --foreground: #F5F5F7;
+  --gray: #86868B;
+  --secondary: #1D1D1F;
   --primary: #FF9230;
   }
 }
@@ -43,10 +43,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-section {
-  margin: 0;
-}
-
 /* ScrollBar - Firefox */
 html {
   scrollbar-width: none;
@@ -55,4 +51,43 @@ html {
 /* ScrollBar - Chrome, Safari, Edge */
 body::-webkit-scrollbar {
   display: none;
+}
+
+
+@keyframes flow {
+  0% {
+    height: 0%;
+    top: 0px;
+    bottom: auto;
+  }
+  46% {
+    height: 100%;
+    top: 0px;
+    bottom: auto;
+  }
+  50% {
+    height: 100%;
+    bottom: 0px;
+    top: auto;
+  }
+  54% {
+    height: 100%;
+    bottom: 0px;
+    top: auto;
+  }
+  100% {
+    height: 0%;
+    bottom: 0px;
+    top: auto;
+  }
+}
+
+.scroll::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--primary);
+  animation: flow 3s ease-in-out infinite;
 }
