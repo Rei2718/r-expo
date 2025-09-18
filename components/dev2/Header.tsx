@@ -34,9 +34,9 @@ export default function Header() {
       <div className="z-50">
         <header
           className={clsx(
-            "fixed top-0 left-0 right-0 z-50 grid grid-cols-3 items-center rounded-full m-2 px-6 py-4 transition-all duration-500",
+            "fixed top-0 left-0 right-0 z-[60] grid grid-cols-3 items-center rounded-full m-2 px-6 py-4 transition-all duration-500",
             {
-              "bg-background/60 backdrop-blur-sm border border-foreground/12":
+              "bg-background/50 backdrop-blur-lg border border-foreground/15":
                 isScrolled && !isOpen,
               "bg-transparent border border-transparent": !isScrolled || isOpen,
             }

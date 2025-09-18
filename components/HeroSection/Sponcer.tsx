@@ -20,7 +20,7 @@ export function MainSponsorCard() {
         grid grid-cols-1 p-6 gap-6
       "
     >
-      <div className="grid grid-cols-1 justify-items-center gap-3">
+      <div className="grid grid-cols-1 justify-items-center gap-2">
         <span className="text-sm text-foreground">Main Supported By</span>
         <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-6">
           <div className="relative w-25 aspect-video">
@@ -58,7 +58,7 @@ export function AlsoSponsorCard() {
         grid grid-cols-1 p-6 gap-6
       "
     >
-      <div className="grid grid-cols-1 justify-items-center gap-3">
+      <div className="grid grid-cols-1 justify-items-center gap-2">
         <span className="text-sm text-foreground">Also Supported By</span>
       </div>
 
