@@ -2,7 +2,7 @@ export default function Concept() {
   return (
     <>
       <div className="bg-secondary">
-        <section className="grid h-auto w-full place-items-center overflow-hidden rounded-t-lg">
+        <section className="grid h-[90lvh] w-full place-items-center overflow-hidden rounded-t-lg">
           <div className="col-start-1 row-start-1 h-full w-full">
             <video
               {...{ "x-webkit-airplay": "deny" }}
